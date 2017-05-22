@@ -28,6 +28,13 @@ module.exports = function(sequelize, DataTypes) {
             }
         },
 
+        ScientistInitials: {
+            type: DataTypes.STRING,
+            validate: {
+                len: [1]
+            }
+        },
+
         MultipleProjects: {
             type: DataTypes.BOOLEAN,
             defaultValue: false,
@@ -62,32 +69,21 @@ module.exports = function(sequelize, DataTypes) {
             defaultValue: sequelize.literal('NOW()')
         }
 
-        // }, {
-        //     classMethods: {
-        //         associate: function(models) {
-        //             this.belongsTo(models.User, {
-        //                 foreignKey: {
-        //                     name: 'owner_id',
-        //                     allowNull: false
-        //                 }
-        //             });
+    }, {
 
+        classMethods: {
 
-        //             this.belongsTo(models.User, {
-        //                 foreignKey: {
-        //                     name: 'user_id',
-        //                     allowNull: false
-        //                 }
-        //             });
+            associate: function(models) {
 
-        //             this.belongsTo(models.Category, {
-        //                 foreignKey: {
-        //                     name: 'category_id',
-        //                     allowNull: false
-        //                 }
-        //             });
-        //         }
-        //     }
+                this.hasMany(models.SampleSheet, {
+
+                    foreignKey: 'nextseq_id',
+                    onDelete: 'cascade'
+
+                });
+            }
+        }
+
     });
 
     return NextSeq;
