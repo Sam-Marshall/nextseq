@@ -31,7 +31,8 @@ module.exports = function(app) {
     app.get('/api/scientist/:initials', function(req, res) {
         db.NextSeq.findAll({
             include: [db.SampleSheet],
-            where: { ScientistInitials: req.params.initials }
+            where: { ScientistInitials: req.params.initials },
+            order: 'ProjectName ASC'
         }).then(function(response) {
             res.json(response);
         })

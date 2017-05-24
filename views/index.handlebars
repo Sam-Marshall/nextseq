@@ -1,0 +1,43 @@
+<h1>Testing</h1>
+<p>See all projects by Scientist</p>
+
+<table class="table table-striped table-bordered table-hover">
+    <thead class='text-center'>
+        <tr>
+            <th>Project Name</th>
+            <th>Scientist</th>
+            <th>Experiment Type</th>
+            <th>Test</th>
+        </tr>
+    <tbody>
+        {{#each data}}
+        <tr data-name={{this.id}} class='projectRow'>
+            <td>{{ProjectName}}</td>
+            <td>{{ScientistInitials}}</td>
+            <td>{{ExperimentType}}</td>
+        </tr>
+        {{/each}}
+    </tbody>
+
+                {{!-- var projectName = data[i].ProjectName;
+                var scientistInt = data[i].ScientistInitials;
+                var sampleSheet = data[i].SampleSheets;
+                var projectID = data[i].id;
+                var experimentType = sampleSheet[0].ExperimentType;
+
+                console.log(data[i]);
+
+                var tableRow = $('<tr>');
+                // tableRow.attr('data-href', '#');
+                tableRow.attr('data-name', projectID);
+                tableRow.addClass('projectRow');
+                var columnOne = $('<td>').text(projectName);
+                var columnTwo = $('<td>').text(scientistInt);
+                var columnThree = $('<td>').text(experimentType);
+
+                tableRow.append(columnOne);
+                tableRow.append(columnTwo);
+                tableRow.append(columnThree);
+
+                tableBody.append(tableRow)
+ --}}
