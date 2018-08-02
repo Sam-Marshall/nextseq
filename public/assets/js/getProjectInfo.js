@@ -41,6 +41,9 @@ $(document).ready(function() {
 
         event.preventDefault();
 
+        $('#tangoTable').css('display', 'block');
+        $('#geoBtn').css('display', 'block');
+
         var tango = $('#projInput').val();
 
         $.get('/api/tango/' + tango, function(data) {

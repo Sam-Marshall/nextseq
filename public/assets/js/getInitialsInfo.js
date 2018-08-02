@@ -7,6 +7,8 @@ $(document).ready(function() {
 
         event.preventDefault();
 
+        $('#tangoTable').css('display', 'block');
+
         var initials = $('#initialsSelect').val().trim();
 
         $.get('/api/scientist/' + initials, function(data) {
@@ -22,7 +24,8 @@ $(document).ready(function() {
 
         var clickedProjectID = $(this).attr('data-name');
 
-        alert(clickedProjectID);
+        $('#tangoTable').css('display', 'block');
+        $('#geoBtn').css('display', 'block');
 
         $.get('/api/nextseq/' + clickedProjectID, function(data) {
 

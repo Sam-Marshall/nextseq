@@ -23,71 +23,19 @@
 }
 
 body {
-    background-image: url('./happyHands.jpg');
+    background-image: url('../images/background.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     font-family: 'Georgia';
 }
 
-footer a {
-    background-color: #F0F8ff;
-    padding: 10px;
-    border-radius: 10px;
-    border-style: solid;
-    border-width: 1px;
-    border-color: #00008B;
+#tangoTable{
+    display: none;
+    margin: 15px;
+    padding: 5px;
 }
 
-#homeFooter {
-    margin-left: 25px;
-}
-
-#surveyFooter {
-    margin-top: 5px;
-    margin-bottom: 10px;
-}
-
-#surveyTitle {
-    background-color: #F0F8ff;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    border-radius: 10px;
-    border-style: solid;
-    border-width: 1px;
-    border-color: #00008B;
-}
-
-#surveyTitle h1 {
-    text-align: center;
-    font-size: 36px;
-    font-size: 6vw;
-    color: #00008B;
-}
-
-.panel {
-    margin: 10px;
-}
-
-#homeBtn {
+#geoBtn{
+    display: none;
     margin: 5px;
-    border-style: solid;
-    border-width: 1px;
-    border-color: #00008B;
-}
-
-#friendImage {
-    width: 100%;
-    height: auto;
-}
-
-#surveyPanel {
-    border-style: solid;
-    border-width: 1px;
-    border-color: #00008B;
-}
-
-#surveyBtn {
-    border-style: solid;
-    border-width: 1px;
-    border-color: #00008B;
 }
